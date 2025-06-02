@@ -29,9 +29,9 @@ export const metadata: Metadata = {
       "Learn. Create. Build. How to build on Solana by building on Solana.",
     images: [
       {
-        url: "/thumbnail.jpg",
-        width: 1200,
-        height: 630,
+        url: "/thumbnail.webp",
+        width: 400,
+        height: 213,
         alt: "Kronos Guild Preview Image",
       },
     ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Learn. Create. Build. How to build on Solana by building on Solana.",
     images: [
       {
-        url: "/thumbnail.jpg",
+        url: "/thumbnail.webp",
         alt: "Kronos Guild Preview Image",
       },
     ],
