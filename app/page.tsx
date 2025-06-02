@@ -20,7 +20,7 @@ export default function Home() {
         <Image
           src="/kronos-guild-logo.svg"
           alt="The Kronos Guild logo"
-          className="mx-auto"
+          className="mx-auto dark:invert text-foreground"
           width={190}
           height={190}
         />
@@ -40,7 +40,7 @@ export default function Home() {
           <Image
             src="/kronos-clock.svg"
             alt="Kronos clock"
-            className="ml-12"
+            className="ml-12 dark:invert"
             width={110}
             height={110}
           />
