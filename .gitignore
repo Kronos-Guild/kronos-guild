@@ -19,7 +19,7 @@
 
 # production
 /build
-
+.clinerules
 # misc
 .DS_Store
 *.pem

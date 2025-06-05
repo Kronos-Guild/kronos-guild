@@ -1,16 +1,11 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import { caryotypeBold } from "./lib/fonts";
 
 const fkRasterGroteskCompactRounded = localFont({
   src: "./fonts/FKRasterGroteskCompact-Rounded.otf",
   weight: "100",
   variable: "--font-fk-raster",
-});
-
-const caryotypeBold = localFont({
-  src: "./fonts/Caryotype-Bold.otf",
-  weight: "100",
-  variable: "--font-caryotype",
 });
 
 export default function Home() {
