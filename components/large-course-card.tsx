@@ -11,14 +11,14 @@ export default function LargeCourseCard({
   tags,
 }: LargeCourseCardProps) {
   return (
-    <div className="bg-neutral-100/15 border border-neutral-100/10 backdrop-blur-sm w-full md:w-fit rounded-xl p-5 text-neutral-50 shadow-2xl h-full flex flex-col md:items-center">
+    <div className="bg-neutral-100/15 border border-neutral-100/10 backdrop-blur-sm w-full md:w-fit rounded-4xl p-5 text-neutral-50 shadow-2xl h-full flex flex-col md:items-center">
       <div className="relative w-full md:max-w-md aspect-[16/9] mb-4">
         <Image
           src={imageUrl || "/placeholder.png"}
           alt={imageAlt}
           fill
           sizes="100%"
-          className="rounded-lg object-cover"
+          className="rounded-3xl object-cover"
         />
       </div>
       <div className="flex flex-col flex-grow text-left">

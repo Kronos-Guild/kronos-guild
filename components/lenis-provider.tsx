@@ -10,8 +10,8 @@ interface LenisProviderProps {
 export default function LenisProvider({ children }: LenisProviderProps) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t: number) => 1 - Math.pow(1 - t, 3), // cubic ease-out
+      duration: 0.6,
+      easing: (t: number) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
     });
 
