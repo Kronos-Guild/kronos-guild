@@ -25,7 +25,7 @@ export default async function BlogIndex() {
   return (
     <div className="flex flex-col items-center justify-between min-h-screen p-8 sm:p-20">
       <main className="flex flex-col gap-8 items-center justify-center text-center mt-20 max-w-3xl">
-        <h1 className={`text-6xl font-bold ${caryotypeBold.className}`}>
+        <h1 className={`text-5xl font-bold ${caryotypeBold.className} uppercase`}>
           Kronos Guild Blog
         </h1>
         <div className="flex flex-col gap-6 w-full">
