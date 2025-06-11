@@ -76,10 +76,10 @@ export default function RootLayout({
             particleCount={90}
             particleRadiusMin={0.6}
             particleRadiusMax={1.3}
-            oscillationAmplitudeMin={25} // Particle will move at least 25px up and 25px down
-            oscillationAmplitudeMax={2} // Particle will move at most 60px up and 60px down
-            oscillationSpeedMin={0.2} // Slower particles
-            oscillationSpeedMax={0.5} // Faster particles (but still relatively gentle)
+            oscillationAmplitudeMin={25}
+            oscillationAmplitudeMax={2}
+            oscillationSpeedMin={0.2}
+            oscillationSpeedMax={0.5}
           />
           <nav className="w-full flex items-center justify-between bg-white mt-4 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-200/15 rounded-full max-w-5xl shadow-lg shadow-neutral-200/50 dark:shadow-neutral-800/10 py-3 px-8 mx-auto backdrop-blur-sm">
             <Link href="/">
