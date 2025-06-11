@@ -29,7 +29,7 @@ export default function HomeTabs() {
   const [largePost, ...smallPosts] = posts;
 
   return (
-    <div className="w-full text-neutral-50 rounded-t-4xl flex-1 flex flex-col">
+    <div className="w-full max-w-5xl text-neutral-50 rounded-t-4xl flex-1 flex flex-col">
       <section className="flex justify-center py-6 gap-4 h-full flex-1">
         <Tabs defaultValue="Learn" className="w-full max-w-6xl">
           <TabsList className="mx-auto rounded-full w-full max-w-xs mb-6">

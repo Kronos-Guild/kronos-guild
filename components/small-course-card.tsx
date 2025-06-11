@@ -12,14 +12,14 @@ export default function SmallCourseCard({
   tags,
 }: SmallCourseCardProps) {
   return (
-    <div className="bg-neutral-100/15 border border-neutral-100/10 backdrop-blur-sm h-44 rounded-xl p-4 text-white shadow-2xl flex text-left gap-4 items-center">
-      <div className="relative aspect-square sm:h-28 flex-shrink-0">
+    <div className="bg-neutral-100/15 border border-neutral-100/10 backdrop-blur-sm rounded-3xl p-4 text-white shadow-2xl flex text-left gap-4 items-center">
+      <div className="relative aspect-square hidden md:block min-h-36 flex-shrink-0">
         <Image
           src={imageUrl || "/placeholder.png"}
           alt={imageAlt}
           fill
           sizes="100%"
-          className="rounded-lg object-cover"
+          className="rounded-2xl object-cover"
         />
       </div>
       <div className="flex flex-col flex-grow">
