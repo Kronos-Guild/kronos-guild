@@ -11,7 +11,7 @@ const fkRasterGroteskCompactRounded = localFont({
 export default function Home() {
   return (
     <main className="flex min-h-[calc(100vh-8vh)] flex-col text-center">
-      <section className="sticky top-0 -z-10 flex flex-col items-center justify-center gap-4 py-32">
+      <section className="sticky top-0 -z-10 flex flex-col items-center justify-center gap-4 py-40">
         <h1 className="text-6xl font-bold font-[family-name:var(--font-days-one)]">
           Learn. Create.{" "}
           <span
