@@ -81,7 +81,7 @@ export default function RootLayout({
             oscillationSpeedMin={0.2}
             oscillationSpeedMax={0.5}
           />
-          <nav className="w-full flex items-center justify-between bg-white mt-4 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-200/15 rounded-full max-w-5xl shadow-lg shadow-neutral-200/50 dark:shadow-neutral-800/10 py-3 px-8 mx-auto backdrop-blur-sm">
+          <nav className="sticky top-4 z-10 w-full flex items-center justify-between bg-neutral-50/40 mt-4 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-200/15 rounded-full max-w-5xl shadow-lg shadow-neutral-800/10 dark:shadow-neutral-800/10 py-3 px-8 mx-auto backdrop-blur-sm">
             <Link href="/">
               <Image
                 src="/kronos-guild-logo.svg"
