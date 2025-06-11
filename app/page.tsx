@@ -1,6 +1,5 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import HomeTabs from "@/components/tabs/HomeTabs";
 
 const fkRasterGroteskCompactRounded = localFont({
