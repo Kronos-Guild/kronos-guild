@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { SmallCourseCardProps } from "../types";
 import { getTagColors, variantStyles } from "@/lib/utils";
 
-interface SmallCourseCardExtendedProps extends SmallCourseCardProps {
+export interface SmallCourseCardExtendedProps extends SmallCourseCardProps {
   variant?: "default" | "blue" | "green" | "purple" | "orange" | "gradient";
 }
 

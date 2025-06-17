@@ -2,8 +2,9 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import HomeTabs, { toCardProps } from "@/components/tabs/HomeTabs";
 import { getBlogMetadata } from "@/lib/blog";
-import SmallCourseCard from "@/components/small-course-card";
+import SmallCourseCard, { SmallCourseCardExtendedProps } from "@/components/small-course-card";
 import Link from "next/link";
+
 
 const fkRasterGroteskCompactRounded = localFont({
   src: "./fonts/FKRasterGroteskCompact-Rounded.otf",
@@ -65,7 +66,7 @@ export default function Home() {
                 >
                   <SmallCourseCard
                     {...toCardProps(post)}
-                    variant={variant as any}
+                    variant={variant as SmallCourseCardExtendedProps["variant"]}
                   />
                 </Link>
               );
@@ -101,7 +102,7 @@ export default function Home() {
                 >
                   <SmallCourseCard
                     {...toCardProps(post)}
-                    variant={variant as any}
+                    variant={variant as SmallCourseCardExtendedProps["variant"]}
                   />
                 </Link>
               );
