@@ -13,7 +13,7 @@ const caryotypeBold = localFont({
   variable: "--font-caryotype",
 });
 
-function toCardProps(post: BlogMetadata): LargeCourseCardProps {
+export function toCardProps(post: BlogMetadata): LargeCourseCardProps {
   return {
     imageUrl: post.imageUrl || "/placeholder.png",
     imageAlt: post.imageAlt || post.title,
