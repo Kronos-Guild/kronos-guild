@@ -32,7 +32,10 @@ function hashString(str: string): number {
   return Math.abs(hash);
 }
 
-export function getTagColors(tag: string): { bgColor: string; textColor: string } {
+export function getTagColors(tag: string): {
+  bgColor: string;
+  textColor: string;
+} {
   const key = tag.toUpperCase();
   if (key in KNOWN_TAG_COLORS) {
     return {
@@ -46,3 +49,47 @@ export function getTagColors(tag: string): { bgColor: string; textColor: string 
   const color = RANDOM_COLORS[idx];
   return { bgColor: color.bg, textColor: color.text };
 }
+
+export const variantStyles = {
+  default: {
+    container: "bg-neutral-100/15 border-neutral-100/10",
+    title: "text-white",
+    subtitle: "text-slate-300",
+    description: "text-slate-400",
+  },
+  blue: {
+    container:
+      "bg-blue-100/20 dark:bg-blue-900/20 border-blue-200/30 dark:border-blue-800/30",
+    title: "text-blue-900 dark:text-blue-100",
+    subtitle: "text-blue-700 dark:text-blue-300",
+    description: "text-blue-600 dark:text-blue-400",
+  },
+  green: {
+    container:
+      "bg-green-100/20 dark:bg-green-900/20 border-green-200/30 dark:border-green-800/30",
+    title: "text-green-900 dark:text-green-100",
+    subtitle: "text-green-700 dark:text-green-300",
+    description: "text-green-600 dark:text-green-400",
+  },
+  purple: {
+    container:
+      "bg-purple-100/20 dark:bg-purple-900/20 border-purple-200/30 dark:border-purple-800/30",
+    title: "text-purple-900 dark:text-purple-100",
+    subtitle: "text-purple-700 dark:text-purple-300",
+    description: "text-purple-600 dark:text-purple-400",
+  },
+  orange: {
+    container:
+      "bg-orange-100/20 dark:bg-orange-900/20 border-orange-200/30 dark:border-orange-800/30",
+    title: "text-orange-900 dark:text-orange-100",
+    subtitle: "text-orange-700 dark:text-orange-300",
+    description: "text-orange-600 dark:text-orange-400",
+  },
+  gradient: {
+    container:
+      "bg-gradient-to-r from-indigo-100/20 to-purple-100/20 dark:from-indigo-900/20 dark:to-purple-900/20 border-indigo-200/30 dark:border-indigo-800/30",
+    title: "text-indigo-900 dark:text-indigo-100",
+    subtitle: "text-indigo-700 dark:text-indigo-300",
+    description: "text-indigo-600 dark:text-indigo-400",
+  },
+} as const;

@@ -1,7 +1,10 @@
 import Image from "next/image";
 import type { SmallCourseCardProps } from "../types";
-import { getTagColors } from "@/lib/utils";
+import { getTagColors, variantStyles } from "@/lib/utils";
 
+interface SmallCourseCardExtendedProps extends SmallCourseCardProps {
+  variant?: "default" | "blue" | "green" | "purple" | "orange" | "gradient";
+}
 
 export default function SmallCourseCard({
   imageUrl,
@@ -10,9 +13,14 @@ export default function SmallCourseCard({
   subtitle,
   description,
   tags,
-}: SmallCourseCardProps) {
+  variant = "default",
+}: SmallCourseCardExtendedProps) {
+  const styles = variantStyles[variant] || variantStyles.default;
+
   return (
-    <div className="bg-neutral-100/15 border border-neutral-100/10 backdrop-blur-sm rounded-3xl p-4 text-white shadow-2xl flex text-left gap-4 items-center">
+    <div
+      className={`${styles.container} border backdrop-blur-sm rounded-3xl p-4 shadow-2xl flex text-left gap-4 items-center`}
+    >
       <div className="relative aspect-square hidden md:block min-h-36 flex-shrink-0">
         <Image
           src={imageUrl || "/placeholder.png"}
@@ -23,11 +31,15 @@ export default function SmallCourseCard({
         />
       </div>
       <div className="flex flex-col flex-grow">
-        <h2 className="text-lg font-bold mb-0.5 font-[family-name:var(--font-days-one)]">{title}</h2>
-        <h3 className="text-sm font-semibold text-slate-300 mb-1">
+        <h2
+          className={`text-lg font-bold mb-0.5 font-[family-name:var(--font-days-one)] ${styles.title}`}
+        >
+          {title}
+        </h2>
+        <h3 className={`text-sm font-semibold mb-1 ${styles.subtitle}`}>
           {subtitle}
         </h3>
-        <p className="text-xs text-slate-400 mb-3 leading-relaxed">
+        <p className={`text-xs mb-3 leading-relaxed ${styles.description}`}>
           {description}
         </p>
         <div className="flex flex-wrap gap-1.5">
