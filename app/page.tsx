@@ -55,7 +55,7 @@ export default function Home() {
               <span className="text-neutral-50/70 text-start max-w-xs">
                 Build a solid foundation for your Solana Journey.
               </span>
-              <Button className="rounded-full bg-neutral-50 text-neutral-800 px-10 py-2">
+              <Button className="rounded-full cursor-pointer hover:bg-neutral-200 transition-all duration-300 bg-neutral-50 text-neutral-800 px-10 py-2">
                 Learn more
               </Button>
             </div>
@@ -83,7 +83,7 @@ export default function Home() {
               <span className="text-neutral-50/70 text-start max-w-xs">
                 Learn how to code in Solana.
               </span>
-              <Button className="rounded-full bg-neutral-50 text-neutral-800 px-10 py-2">
+              <Button className="rounded-full cursor-pointer hover:bg-neutral-200 transition-all duration-300 bg-neutral-50 text-neutral-800 px-10 py-2">
                 Learn more
               </Button>
             </div>

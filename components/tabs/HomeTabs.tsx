@@ -82,7 +82,7 @@ export default function HomeTabs() {
             className="flex items-center justify-center w-full flex-1"
           >
             <span
-              className={`${caryotypeBold.className} text-4xl tracking-wider uppercase`}
+              className={`${caryotypeBold.className} text-neutral-800 text-4xl tracking-wider uppercase`}
             >
               Coming Soon
             </span>
@@ -92,7 +92,7 @@ export default function HomeTabs() {
             className="flex items-center justify-center w-full flex-1"
           >
             <span
-              className={`${caryotypeBold.className} text-4xl tracking-wider uppercase`}
+              className={`${caryotypeBold.className} text-neutral-800 text-4xl tracking-wider uppercase`}
             >
               Coming Soon
             </span>
