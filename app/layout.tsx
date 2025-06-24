@@ -70,7 +70,7 @@ export default function RootLayout({
         className={`${daysOne.variable} ${inter.variable} ${geistMono.variable} bg-neutral-50 antialiased`}
       >
         <LenisProvider>
-          <nav className="sticky top-4 z-50 w-full flex items-center justify-between bg-white/40 mt-4 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-200/15 rounded-full max-w-5xl shadow-lg shadow-neutral-800/10 dark:shadow-neutral-800/10 py-3 px-8 mx-auto backdrop-blur-sm">
+          <nav className="sticky top-4 z-50 w-full flex items-center justify-between bg-slate-50/50 mt-4 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-200/15 rounded-xl max-w-5xl dark:shadow-neutral-800/10 py-3 px-8 mx-auto backdrop-blur-sm">
             <Link href="/">
               <Image
                 src="/kronos-guild-logo.svg"
