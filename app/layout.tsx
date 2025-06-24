@@ -3,7 +3,6 @@ import { Geist_Mono, Days_One, Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-import ParticleBackground from "@/components/particle-background";
 import LenisProvider from "@/components/lenis-provider";
 
 const daysOne = Days_One({

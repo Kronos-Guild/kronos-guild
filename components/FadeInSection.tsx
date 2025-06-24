@@ -33,7 +33,7 @@ export default function FadeInSection({
   threshold = 0.2,
   once = true,
 }: FadeInSectionProps) {
-  const ref = useRef<Element | null>(null);
+  const ref = useRef<HTMLElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function FadeInSection({
 
   return (
     <Component
-      ref={ref as any}
+      ref={ref as React.Ref<HTMLElement>}
       className={clsx(
         "transition-all duration-700 ease-out",
         !isVisible && "opacity-0 translate-y-10",
