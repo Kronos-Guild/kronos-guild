@@ -11,7 +11,7 @@ export default function LargeCourseCard({
   tags,
 }: LargeCourseCardProps) {
   return (
-    <div className="bg-neutral-100/15 border border-neutral-100/10 backdrop-blur-sm w-full md:w-fit rounded-4xl p-5 text-neutral-50 shadow-2xl h-full flex flex-col md:items-center">
+    <div className="bg-neutral-800/80 backdrop-blur-sm w-full max-h-fit md:w-fit rounded-4xl p-5 text-neutral-50 h-full hover:shadow-xl transition-all duration-300 flex flex-col md:items-center">
       <div className="relative w-full md:max-w-md aspect-[16/9] mb-4">
         <Image
           src={imageUrl || "/placeholder.png"}

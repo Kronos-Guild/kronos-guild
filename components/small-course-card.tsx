@@ -12,7 +12,7 @@ export default function SmallCourseCard({
   tags,
 }: SmallCourseCardProps) {
   return (
-    <div className="bg-neutral-100/15 border border-neutral-100/10 backdrop-blur-sm rounded-3xl p-4 text-white shadow-2xl flex text-left gap-4 items-center">
+    <div className="bg-neutral-800/80 backdrop-blur-sm rounded-3xl p-4 text-neutral-50 flex text-left gap-4 items-center hover:shadow-xl transition-all duration-300">
       <div className="relative aspect-square hidden md:block min-h-36 flex-shrink-0">
         <Image
           src={imageUrl || "/placeholder.png"}
