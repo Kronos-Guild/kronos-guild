@@ -3,7 +3,6 @@ import { Geist_Mono, Days_One, Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-import ParticleBackground from "@/components/particle-background";
 import LenisProvider from "@/components/lenis-provider";
 
 const daysOne = Days_One({
@@ -54,8 +53,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon-dark.svg", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-light.svg", media: "(prefers-color-scheme: dark)" },
+      { url: "/kronos-clock-light.svg", media: "(prefers-color-scheme: light)" },
+      { url: "/kronos-clock.svg", media: "(prefers-color-scheme: dark)" },
     ],
   },
 };
@@ -68,16 +67,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${daysOne.variable} ${inter.variable} ${geistMono.variable} antialiased`}
+        className={`${daysOne.variable} ${inter.variable} ${geistMono.variable} bg-neutral-50 antialiased`}
       >
         <LenisProvider>
-          <ParticleBackground
-            particleColor="#333333"
-            particleCount={90}
-            particleRadiusMin={0.6}
-            particleRadiusMax={1.3}
-          />
-          <nav className="sticky top-4 z-10 w-full flex items-center justify-between bg-neutral-50/40 mt-4 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-200/15 rounded-full max-w-5xl shadow-lg shadow-neutral-800/10 dark:shadow-neutral-800/10 py-3 px-8 mx-auto backdrop-blur-sm">
+          <nav className="sticky top-4 z-50 w-full flex items-center justify-between bg-slate-50/50 mt-4 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-200/15 rounded-xl max-w-5xl dark:shadow-neutral-800/10 py-3 px-8 mx-auto backdrop-blur-sm">
             <Link href="/">
               <Image
                 src="/kronos-guild-logo.svg"
@@ -91,7 +84,7 @@ export default function RootLayout({
               <Link href="/blog">Blog</Link>
               <Link
                 href="/start-building"
-                className="rounded-full text-center font-mediumxº bg-neutral-700 hover:bg-neutral-600 transition-colors text-neutral-50 text-sm px-6 py-2"
+                className="rounded-full text-center font-medium bg-neutral-700 hover:bg-neutral-600 transition-colors text-neutral-50 text-sm px-6 py-2"
               >
                 Start Building
               </Link>

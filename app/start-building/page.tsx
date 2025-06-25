@@ -24,7 +24,7 @@ export default function StartBuilding() {
       <Image
         src="/kronos-clock.svg"
         alt="Kronos clock"
-        className="dark:invert ml-12"
+        className="dark:invert"
         width={110}
         height={110}
       />

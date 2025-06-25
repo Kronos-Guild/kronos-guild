@@ -29,24 +29,24 @@ export default function HomeTabs() {
   const [largePost, ...smallPosts] = posts;
 
   return (
-    <div className="w-full max-w-5xl text-neutral-50 rounded-t-4xl flex-1 flex flex-col">
+    <div className="w-full max-w-5xl text-neutral-50 flex-1 flex flex-col z-50">
       <section className="flex justify-center py-6 gap-4 h-full flex-1">
         <Tabs defaultValue="Learn" className="w-full max-w-6xl">
-          <TabsList className="mx-auto rounded-full w-full max-w-xs mb-6">
+          <TabsList className="mx-auto rounded-full w-full max-w-xs mb-6 bg-white border backdrop-blur-sm">
             <TabsTrigger
-              className="rounded-full data-[state=active]:text-neutral-50"
+              className="rounded-full text-neutral-800 data-[state=active]:text-neutral-50"
               value="Learn"
             >
               Learn
             </TabsTrigger>
             <TabsTrigger
-              className="rounded-full data-[state=active]:text-neutral-50"
+              className="rounded-full text-neutral-800 data-[state=active]:text-neutral-50"
               value="Create"
             >
               Create
             </TabsTrigger>
             <TabsTrigger
-              className="rounded-full data-[state=active]:text-neutral-50"
+              className="rounded-full text-neutral-800 data-[state=active]:text-neutral-50"
               value="Build"
             >
               Build
@@ -59,7 +59,6 @@ export default function HomeTabs() {
             {largePost && (
               <Link
                 href={`/blog/${largePost.slug}`}
-                className="block hover:opacity-90 transition-opacity duration-300"
               >
                 <LargeCourseCard {...toCardProps(largePost)} />
               </Link>
@@ -71,7 +70,6 @@ export default function HomeTabs() {
                   <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
-                    className="block hover:opacity-90 transition-opacity duration-300"
                   >
                     <SmallCourseCard {...toCardProps(post)} />
                   </Link>
@@ -84,7 +82,7 @@ export default function HomeTabs() {
             className="flex items-center justify-center w-full flex-1"
           >
             <span
-              className={`${caryotypeBold.className} text-4xl tracking-wider uppercase`}
+              className={`${caryotypeBold.className} text-neutral-800 text-4xl tracking-wider uppercase`}
             >
               Coming Soon
             </span>
@@ -94,7 +92,7 @@ export default function HomeTabs() {
             className="flex items-center justify-center w-full flex-1"
           >
             <span
-              className={`${caryotypeBold.className} text-4xl tracking-wider uppercase`}
+              className={`${caryotypeBold.className} text-neutral-800 text-4xl tracking-wider uppercase`}
             >
               Coming Soon
             </span>
