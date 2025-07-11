@@ -2,7 +2,6 @@ import Image from "next/image";
 import type { SmallCourseCardProps } from "../types";
 import { getTagColors } from "@/lib/utils";
 
-
 export default function SmallCourseCard({
   imageUrl,
   imageAlt,
@@ -23,7 +22,9 @@ export default function SmallCourseCard({
         />
       </div>
       <div className="flex flex-col flex-grow">
-        <h2 className="text-lg font-bold mb-0.5 font-[family-name:var(--font-days-one)]">{title}</h2>
+        <h2 className="text-lg font-bold mb-0.5 font-[family-name:var(--font-days-one)]">
+          {title.length > 25 ? title.slice(0, 25) + "..." : title}
+        </h2>
         <h3 className="text-sm font-semibold text-slate-300 mb-1">
           {subtitle}
         </h3>
