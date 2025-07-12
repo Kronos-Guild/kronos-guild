@@ -127,3 +127,164 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Prose styles for markdown content */
+.prose {
+  @apply text-foreground max-w-none;
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground font-bold tracking-tight;
+  }
+  
+  h1 { 
+    @apply text-4xl sm:text-5xl mt-12 mb-8 leading-tight; 
+  }
+  h2 { 
+    @apply text-2xl sm:text-3xl mt-12 mb-6 leading-tight; 
+  }
+  h3 { 
+    @apply text-xl sm:text-2xl mt-10 mb-4; 
+  }
+  h4 { 
+    @apply text-lg sm:text-xl mt-8 mb-4; 
+  }
+  
+  /* Paragraphs and text */
+  p { 
+    @apply mb-7 leading-[1.8] text-lg text-foreground/85; 
+  }
+  
+  strong {
+    @apply font-semibold text-foreground;
+  }
+  
+  em {
+    @apply italic text-foreground/90;
+  }
+  
+  /* Lists */
+  ul, ol { 
+    @apply my-8 ml-6 space-y-3 text-lg; 
+  }
+  ul { 
+    @apply list-disc marker:text-foreground/40; 
+  }
+  ol { 
+    @apply list-decimal marker:text-foreground/40; 
+  }
+  li { 
+    @apply pl-2 text-foreground/85 leading-relaxed; 
+  }
+  
+  /* Links */
+  a {
+    @apply text-blue-500 no-underline hover:underline hover:underline-offset-4 transition-all hover:text-blue-400;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    @apply border-l-4 border-blue-500/30 pl-6 py-2 my-8 italic text-foreground/75 bg-blue-500/5 rounded-r-lg;
+  }
+  
+  /* Code blocks */
+  pre {
+    @apply rounded-lg overflow-hidden my-8 p-6 border border-gray-200 bg-white;
+  }
+  
+  pre code {
+    @apply text-[15px] leading-[1.7] font-mono block;
+  }
+  
+  /* Inline code */
+  :not(pre) > code {
+    @apply bg-red-50 dark:bg-red-50 px-[0.3em] py-[0.15em] rounded text-[0.9em] font-mono text-red-600 dark:text-red-600;
+  }
+  
+  /* Tables */
+  table {
+    @apply w-full my-8 text-sm border-collapse rounded-lg overflow-hidden;
+    display: table !important;
+  }
+  
+  table, th, td {
+    @apply border border-gray-200;
+  }
+  
+  thead {
+    @apply bg-gray-50 border-b-2 border-gray-200;
+  }
+  
+  th {
+    @apply px-4 py-3 text-left font-semibold text-gray-800 text-sm;
+  }
+  
+  tbody tr {
+    @apply border-b border-gray-100 transition-colors;
+  }
+  
+  tbody tr:last-child {
+    @apply border-b-0;
+  }
+  
+  tbody tr:hover {
+    @apply bg-gray-50;
+  }
+  
+  td {
+    @apply px-4 py-3 text-gray-700 text-sm;
+  }
+  
+  /* Responsive table wrapper */
+  .prose div:has(> table) {
+    @apply overflow-x-auto my-8 -mx-2 px-2;
+  }
+  
+  /* Fix table display */
+  .prose table {
+    @apply min-w-full;
+  }
+  
+  /* Images */
+  img {
+    @apply rounded-xl my-10 shadow-xl max-w-full h-auto;
+  }
+  
+  /* Horizontal rules */
+  hr {
+    @apply border-t border-border/30 my-16;
+  }
+}
+
+/* Syntax highlighting */
+[data-rehype-pretty-code-figure] {
+  @apply my-8 mx-auto;
+}
+
+[data-rehype-pretty-code-figure] pre {
+  @apply overflow-x-auto px-6 py-5 my-0 rounded-lg text-[15px] leading-[1.7] border border-gray-200 bg-white;
+}
+
+[data-rehype-pretty-code-figure] code {
+  @apply grid;
+}
+
+[data-rehype-pretty-code-figure] .line {
+  @apply px-0;
+}
+
+[data-rehype-pretty-code-figure] .line--highlighted {
+  @apply bg-yellow-100/50 -mx-6 px-6;
+}
+
+[data-rehype-pretty-code-figure] .word--highlighted {
+  @apply bg-yellow-200/50 px-1 rounded;
+}
+
+[data-rehype-pretty-code-title] {
+  @apply px-6 py-3 text-sm font-medium text-gray-700 bg-gray-100 rounded-t-lg border border-gray-200 border-b-0;
+}
+
+[data-rehype-pretty-code-title] + pre {
+  @apply rounded-t-none mt-0;
+}
